@@ -38,13 +38,14 @@ The Titanic dataset contains information about {total_passengers} passengers:
 - Ports of Embarkation: S (Southampton), C (Cherbourg), Q (Queenstown)
 """
 
-openrouter_api_key = "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"
+openrouter_api_key = "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"
 
 # Initialize OpenRouter LLM
+# Initialize OpenRouter LLM
 llm = ChatOpenAI(
-    model_name="openai/gpt-3.5-turbo",
+    model_name="deepseek/deepseek-r1:free",  # Correct model ID for DeepSeek R1 (free)
     openai_api_base="https://openrouter.ai/api/v1",
-    openai_api_key=openrouter_api_key,
+    openai_api_key=openrouter_api_key,  # Ensure your API key is correctly set
     max_tokens=1000,
     temperature=0.7,
     streaming=True,
@@ -53,6 +54,7 @@ llm = ChatOpenAI(
         "X-Title": "Titanic Chatbot"
     }
 )
+
 
 # Create the conversation prompt template
 prompt = ChatPromptTemplate.from_messages([
