@@ -38,11 +38,13 @@ The Titanic dataset contains information about {total_passengers} passengers:
 - Ports of Embarkation: S (Southampton), C (Cherbourg), Q (Queenstown)
 """
 
+openrouter_api_key = "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"
+
 # Initialize OpenRouter LLM
 llm = ChatOpenAI(
     model_name="openai/gpt-3.5-turbo",
     openai_api_base="https://openrouter.ai/api/v1",
-    openai_api_key=os.getenv("OPENROUTER_API_KEY"),
+    openai_api_key=openrouter_api_key,
     max_tokens=1000,
     temperature=0.7,
     streaming=True,
