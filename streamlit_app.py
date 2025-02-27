@@ -38,7 +38,7 @@ The Titanic dataset contains information about {total_passengers} passengers:
 - Ports of Embarkation: S (Southampton), C (Cherbourg), Q (Queenstown)
 """
 
-openrouter_api_key = "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"
+openrouter_api_key = "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"
 
 # Initialize OpenRouter LLM
 # Initialize OpenRouter LLM
